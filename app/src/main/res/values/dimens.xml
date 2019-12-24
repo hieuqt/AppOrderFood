@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--RegisterActivity-->
+    <dimen name="ll_margin">16dp</dimen>
+    <dimen name="ed_padding">5dp</dimen>
+    <dimen name="ed_padding_login">8dp</dimen>
+    <dimen name="ed_margin">8dp</dimen>
+    <dimen name="ed_dra_padding">8dp</dimen>
+    <dimen name="btn_padding">8dp</dimen>
+    <dimen name="btn_margin">8dp</dimen>
+    <dimen name="iv_padding">8dp</dimen>
+    <dimen name="iv_margin">8dp</dimen>
+    <dimen name="tv_size">30sp</dimen>
+    <dimen name="hd_size">190dp</dimen>
+    <dimen name="circle_size">76dp</dimen>
+    <dimen name="circle_margin_left">24dp</dimen>
+    <dimen name="circle_margin_bottom">5dp</dimen>
+    <dimen name="tv_name_navi_size">17sp</dimen>
+</resources>

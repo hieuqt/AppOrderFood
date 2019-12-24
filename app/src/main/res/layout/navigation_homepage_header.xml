@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hd_size"
+    android:background="@drawable/hd_homepage_navi"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/logo_navi"
+        android:layout_width="@dimen/circle_size"
+        android:layout_height="@dimen/circle_size"
+        android:src="@drawable/ic_register_mixifood_2"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/circle_margin_left"
+        android:layout_marginStart="@dimen/circle_margin_left"
+        android:layout_marginBottom="@dimen/circle_margin_bottom"
+        >
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/tv_name_navi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_navi"
+        android:text="@string/employee"
+        android:textColor="@color/colorWhite"
+        android:textStyle="italic"
+        android:textSize="@dimen/tv_name_navi_size"
+        android:layout_alignStart="@+id/logo_navi"
+        android:layout_alignLeft="@+id/logo_navi"
+        android:background="@drawable/ed_homepage_hd"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:checked="true"
+            android:icon="@drawable/ic_home_page"
+            android:title="@string/home_page" />
+        <item
+            android:icon="@drawable/ic_restaurant_menu"
+            android:title="@string/menu" />
+        <item
+            android:icon="@drawable/ic_employee"
+            android:title="@string/employee" />
+        <item
+            android:icon="@drawable/ic_statistic"
+            android:title="@string/statistic" />
+        <item
+            android:icon="@drawable/ic_setting"
+            android:title="@string/setting" />
+    </group>
+
+</menu>

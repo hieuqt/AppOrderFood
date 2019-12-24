@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AppOrderFood</string>
+    <string name="account">Account</string>
+    <string name="password">Password</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="dof">Date of Birth</string>
+    <string name="national_id">National ID</string>
+    <string name="cancel">Cancel</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="error_enter_account">Please enter your account!</string>
+    <string name="error_enter_password">Please enter your password!</string>
+    <string name="error_enter_acc_pass">Please enter your account, password!</string>
+    <string name="add_success_employee">Add success employee!</string>
+    <string name="add_failed_employee">Add failed employee!</string>
+    <string name="login_success">Login successfully!</string>
+    <string name="login_failed">Account, password not correct!</string>
+    <string name="home_page">Home Page</string>
+    <string name="menu">Menu</string>
+    <string name="employee">Employee</string>
+    <string name="statistic">Statistic</string>
+    <string name="setting">Settings</string>
+
+</resources>
