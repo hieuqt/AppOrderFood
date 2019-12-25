@@ -113,8 +113,8 @@
             android:textColorHint="@color/colorGray"
             android:padding="@dimen/ed_padding"
             android:layout_margin="@dimen/ed_margin"
-            android:drawableLeft="@drawable/ic_idcard"
-            android:drawableStart="@drawable/ic_idcard"
+            android:drawableLeft="@drawable/ic_card"
+            android:drawableStart="@drawable/ic_card"
             android:drawablePadding="@dimen/ed_dra_padding"
             android:inputType="numberDecimal"
             android:maxLength="8"
@@ -133,9 +133,8 @@
                 android:layout_weight="1"
                 android:padding="@dimen/btn_padding"
                 android:layout_margin="@dimen/btn_margin"
-                android:textColor="@color/colorRed"
-                android:background="@drawable/btn_register"
-                android:textStyle="bold"
+                android:textColor="@color/colorViolet"
+                android:background="@drawable/btn_register_custom"
                 />
 
             <Button
@@ -146,9 +145,8 @@
                 android:layout_weight="1"
                 android:padding="@dimen/btn_padding"
                 android:layout_margin="@dimen/btn_margin"
-                android:textColor="@color/colorRed"
-                android:background="@drawable/btn_register"
-                android:textStyle="bold"
+                android:textColor="@color/colorViolet"
+                android:background="@drawable/btn_register_custom"
                 />
         </LinearLayout>
     </LinearLayout>

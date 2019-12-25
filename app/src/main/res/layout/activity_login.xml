@@ -77,7 +77,6 @@
                 android:layout_margin="@dimen/btn_margin"
                 android:textColor="@color/colorViolet"
                 android:background="@drawable/btn_login_custom"
-                android:textStyle="bold"
                 />
 
             <Button
@@ -90,7 +89,6 @@
                 android:layout_margin="@dimen/btn_margin"
                 android:textColor="@color/colorViolet"
                 android:background="@drawable/btn_login_custom"
-                android:textStyle="bold"
                 />
         </LinearLayout>
     </LinearLayout>
