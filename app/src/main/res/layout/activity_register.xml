@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:padding="@dimen/iv_padding"
         android:layout_margin="@dimen/iv_margin"
-        android:src="@drawable/ic_register_mixifood"
+        android:src="@drawable/ic_register_mixifood_3"
         android:layout_above="@+id/ln_register"
         />
     <ProgressBar
@@ -37,7 +37,7 @@
         <EditText
             android:id="@+id/ed_account"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/ed_account_register_size"
             android:background="@drawable/ed_register"
             android:hint="@string/account"
             android:textColorHint="@color/colorGray"
@@ -52,7 +52,7 @@
         <EditText
             android:id="@+id/ed_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/ed_password_register_size"
             android:background="@drawable/ed_register"
             android:hint="@string/password"
             android:textColorHint="@color/colorGray"
@@ -69,6 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginStart="2.5dp"
             >
 
             <RadioButton
@@ -76,8 +78,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/gender_male"
-                android:textColor="@color/colorWhite"
-                android:buttonTint="@color/colorWhite"
+                android:textSize="@dimen/text_rbtn_size"
+                android:textColor="@color/colorViolet"
+                android:buttonTint="@color/colorViolet"
                 android:checked="true"
                 />
             <RadioButton
@@ -85,8 +88,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/gender_female"
-                android:textColor="@color/colorWhite"
-                android:buttonTint="@color/colorWhite"
+                android:textSize="@dimen/text_rbtn_size"
+                android:textColor="@color/colorViolet"
+                android:buttonTint="@color/colorViolet"
                 />
         </RadioGroup>
 
@@ -128,7 +132,7 @@
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:text="@string/register"
                 android:layout_weight="1"
                 android:padding="@dimen/btn_padding"
@@ -140,7 +144,7 @@
             <Button
                 android:id="@+id/btn_cancel"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:text="@string/cancel"
                 android:layout_weight="1"
                 android:padding="@dimen/btn_padding"

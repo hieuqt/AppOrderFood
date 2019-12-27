@@ -149,6 +149,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(mContext, getResources().getString(R.string.login_success), Toast.LENGTH_SHORT).show();
                 Intent intentHomePage = new Intent(mContext, HomePageActivity.class);
                 intentHomePage.putExtra("account", mEdAccount.getText().toString());
+                Log.d(TAG, "onPostExecute: " + mEdAccount.getText().toString());
                 startActivity(intentHomePage);
             } else {
                 Toast.makeText(mContext, getResources().getString(R.string.login_failed), Toast.LENGTH_SHORT).show();

@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:padding="@dimen/iv_padding"
         android:layout_margin="@dimen/iv_margin"
-        android:src="@drawable/ic_register_mixifood"
+        android:src="@drawable/ic_register_mixifood_3"
         android:layout_above="@+id/ln_login"
         />
     <ProgressBar
