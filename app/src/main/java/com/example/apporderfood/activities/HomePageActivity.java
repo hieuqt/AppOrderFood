@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -57,6 +58,8 @@ public class HomePageActivity extends AppCompatActivity
         String account = intent.getStringExtra("account");
         Log.d(TAG, "addEvent: " + account);
         mTvEmplName.setText(account);
+        mNavigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @SuppressLint("RestrictedApi")
@@ -69,7 +72,7 @@ public class HomePageActivity extends AppCompatActivity
 
     private void configureNavigationDrawer() {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-                mToolbar, R.string.open, R.string.close){
+                mToolbar, R.string.open, R.string.close) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -87,6 +90,37 @@ public class HomePageActivity extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.it_homepage:
+                Toast.makeText(this, getResources().getString(R.string.home_page), Toast.LENGTH_SHORT).show();
+                menuItem.setChecked(true);
+                break;
+            case R.id.it_menu:
+                Toast.makeText(this, getResources().getString(R.string.menu), Toast.LENGTH_SHORT).show();
+                menuItem.setChecked(true);
+                break;
+            case R.id.it_employee:
+                Toast.makeText(this, getResources().getString(R.string.employee), Toast.LENGTH_SHORT).show();
+                menuItem.setChecked(true);
+                break;
+            case R.id.it_statistic:
+                Toast.makeText(this, getResources().getString(R.string.statistic), Toast.LENGTH_SHORT).show();
+                menuItem.setChecked(true);
+                break;
+            case R.id.it_settings:
+                Toast.makeText(this, getResources().getString(R.string.setting), Toast.LENGTH_SHORT).show();
+                menuItem.setChecked(true);
+                break;
+            case R.id.it_logout:
+                Toast.makeText(this, getResources().getString(R.string.logout), Toast.LENGTH_SHORT).show();
+                menuItem.setChecked(true);
+                Intent intent = new Intent(this, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
         return false;
     }
 }

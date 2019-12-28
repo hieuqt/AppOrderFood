@@ -2,21 +2,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:checked="true"
+            android:id="@+id/it_homepage"
             android:icon="@drawable/ic_home_page"
             android:title="@string/home_page" />
         <item
+            android:id="@+id/it_menu"
             android:icon="@drawable/ic_restaurant_menu"
             android:title="@string/menu" />
         <item
+            android:id="@+id/it_employee"
             android:icon="@drawable/ic_employee"
             android:title="@string/employee" />
         <item
+            android:id="@+id/it_statistic"
             android:icon="@drawable/ic_statistic"
             android:title="@string/statistic" />
         <item
+            android:id="@+id/it_settings"
             android:icon="@drawable/ic_setting"
             android:title="@string/setting" />
+        <item
+            android:id="@+id/it_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
     </group>
 
 </menu>
