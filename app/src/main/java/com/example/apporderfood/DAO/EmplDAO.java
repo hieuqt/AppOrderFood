@@ -4,12 +4,14 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.apporderfood.DTO.EmplDTO;
 import com.example.apporderfood.utilities.CreateDatabase;
 
 public class EmplDAO {
 
+    private static final String TAG = EmplDAO.class.getSimpleName();
     private SQLiteDatabase mSQLiteDatabase;
 
     public EmplDAO(Context context) {
@@ -42,6 +44,7 @@ public class EmplDAO {
                 + CreateDatabase.TB_EMPLOYEE_ACC + " = '" + account + "' AND "
                 + CreateDatabase.TB_EMPLOYEE_PASS + " = '" + password + "' ";
         Cursor cursor = mSQLiteDatabase.rawQuery(queryEmpl_2, null);
+        Log.d(TAG, "checkLoginEmployee: " + cursor.getCount());
         if(cursor.getCount() != 0){
             return true;
         }else{

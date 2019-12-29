@@ -61,10 +61,10 @@ public class CreateDatabase extends SQLiteOpenHelper {
                 + TB_EMPLOYEE_DOB + " TEXT, " + TB_EMPLOYEE_ID_NATIONAL + " INTEGER )";
 
         String tbTABLE = "CREATE TABLE " + TB_TABLE_FOOD + " ( " + TB_TABLE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + TB_TABLE_NAME + "TEXT, " + TB_TABLE_STATUS + " TEXT ) ";
+                + TB_TABLE_NAME + " TEXT, " + TB_TABLE_STATUS + " TEXT ) ";
 
         String tbFOOD = "CREATE TABLE " + TB_FOOD + " ( " + TB_FOOD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + TB_FOOD_NAME + "TEXT, " + TB_FOOD_FOOD_TYPE_ID + " INTEGER, " + TB_FOOD_PRICE + "TEXT ) ";
+                + TB_FOOD_NAME + " TEXT, " + TB_FOOD_FOOD_TYPE_ID + " INTEGER, " + TB_FOOD_PRICE + " TEXT ) ";
 
         String tbFOOD_TYPE = "CREATE TABLE " + TB_FOOD_TYPE + " ( " + TB_FOOD_TYPE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + TB_FOOD_TYPE_NAME + " TEXT ) ";
@@ -87,7 +87,13 @@ public class CreateDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS "+TB_EMPLOYEE);
+        db.execSQL("DROP TABLE IF EXISTS "+TB_TABLE_FOOD);
+        db.execSQL("DROP TABLE IF EXISTS "+TB_FOOD);
+        db.execSQL("DROP TABLE IF EXISTS "+TB_FOOD_TYPE);
+        db.execSQL("DROP TABLE IF EXISTS "+TB_ORDER_FOOD);
+        db.execSQL("DROP TABLE IF EXISTS "+TB_ORDER_DETAIL);
+        onCreate(db);
     }
 
     public SQLiteDatabase open(){

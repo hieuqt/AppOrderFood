@@ -16,8 +16,11 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.apporderfood.R;
+import com.example.apporderfood.fragments.ShowTableFoodFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -30,6 +33,7 @@ public class HomePageActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private TextView mTvEmplName;
     private View mView;
+    private FragmentManager mFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,7 @@ public class HomePageActivity extends AppCompatActivity
     private void init() {
         initView();
         addEvent();
+        intHomePage();
     }
 
     private void initView() {
@@ -51,6 +56,7 @@ public class HomePageActivity extends AppCompatActivity
         mTvEmplName = mView.findViewById(R.id.tv_name_navi);
         configureToolbar();
         configureNavigationDrawer();
+        mFragmentManager = getSupportFragmentManager();
     }
 
     private void addEvent() {
@@ -60,6 +66,13 @@ public class HomePageActivity extends AppCompatActivity
         mTvEmplName.setText(account);
         mNavigationView.setNavigationItemSelectedListener(this);
 
+    }
+
+    private void intHomePage() {
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+        ShowTableFoodFragment showTableFoodFragment = new ShowTableFoodFragment();
+        fragmentTransaction.replace(R.id.fl_content, showTableFoodFragment);
+        fragmentTransaction.commit();
     }
 
     @SuppressLint("RestrictedApi")
@@ -94,6 +107,8 @@ public class HomePageActivity extends AppCompatActivity
             case R.id.it_homepage:
                 Toast.makeText(this, getResources().getString(R.string.home_page), Toast.LENGTH_SHORT).show();
                 menuItem.setChecked(true);
+                mDrawerLayout.closeDrawers();
+                intHomePage();
                 break;
             case R.id.it_menu:
                 Toast.makeText(this, getResources().getString(R.string.menu), Toast.LENGTH_SHORT).show();
