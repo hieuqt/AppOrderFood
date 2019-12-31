@@ -8,4 +8,5 @@
     <color name="colorRed">#F44336</color>
     <color name="colorViolet">#560027</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorLightGray">#EEEEEE</color>
 </resources>

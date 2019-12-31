@@ -11,4 +11,7 @@
     <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">#FFFFFF</item>
     </style>
+    <style name="PopUpActivity" parent="Theme.AppCompat.Dialog">
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

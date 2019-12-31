@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.AddTableFoodActivity"></activity>
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +18,9 @@
         </activity>
         <activity android:name=".activities.RegisterActivity"></activity>
         <activity android:name=".activities.HomePageActivity"></activity>
+        <activity android:name=".activities.AddTableFoodActivity"
+            android:theme="@style/PopUpActivity"
+            ></activity>
     </application>
 
 </manifest>

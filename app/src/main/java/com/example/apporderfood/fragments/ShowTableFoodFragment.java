@@ -1,19 +1,24 @@
 package com.example.apporderfood.fragments;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.apporderfood.R;
+import com.example.apporderfood.activities.AddTableFoodActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +29,9 @@ import com.example.apporderfood.R;
  * create an instance of this fragment.
  */
 public class ShowTableFoodFragment extends Fragment {
+
+    private static final String TAG = ShowTableFoodFragment.class.getSimpleName();
+    private static final int REQUEST_CODE_ADD = 1;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -78,13 +86,22 @@ public class ShowTableFoodFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        MenuItem itAddTableFood = menu.add(1, R.id.it_add_food_table, 1, R.string.add_food_table);
+        MenuItem itAddTableFood = menu.add(1, R.id.it_add_food_table, 1, R.string.new_food_table);
         itAddTableFood.setIcon(R.drawable.ic_add);
         itAddTableFood.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.it_add_food_table:
+                Toast.makeText(getActivity(), getResources().getString(R.string.new_food_table), Toast.LENGTH_SHORT).show();
+                Intent iAddFoodTable = new Intent(getActivity(), AddTableFoodActivity.class);
+                startActivityForResult(iAddFoodTable,REQUEST_CODE_ADD);
+                break;
+            default:
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -125,5 +142,22 @@ public class ShowTableFoodFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_CODE_ADD){
+            if(resultCode == Activity.RESULT_OK){
+                boolean check = data.getBooleanExtra("checkadd", false);
+                String nameFoodTable =  data.getStringExtra("namefoodtable");
+                Log.d(TAG, "onActivityResult: " + check + " " + nameFoodTable);
+                if (check){
+                    Toast.makeText(getActivity(), getResources().getString(R.string.add_success_food_table) +  " '" + nameFoodTable + "'", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getActivity(), getResources().getString(R.string.add_failed_food_table), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
     }
 }

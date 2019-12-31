@@ -47,6 +47,7 @@
             android:drawableStart="@drawable/ic_user"
             android:drawablePadding="@dimen/ed_dra_padding"
             android:singleLine="true"
+            android:inputType="text"
             />
 
         <EditText
@@ -106,6 +107,7 @@
             android:drawableLeft="@android:drawable/ic_menu_my_calendar"
             android:drawableStart="@android:drawable/ic_menu_my_calendar"
             android:drawablePadding="@dimen/ed_dra_padding"
+            android:inputType="text"
             />
 
         <EditText

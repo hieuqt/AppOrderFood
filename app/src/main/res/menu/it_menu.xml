@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/it_add_food_table"
-        android:title="@string/add_food_table"
+        android:title="@string/new_food_table"
         />
 </menu>

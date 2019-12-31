@@ -1,11 +1,13 @@
 package com.example.apporderfood.activities;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -73,6 +75,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        closeKeyboard();
         switch (v.getId()) {
             case R.id.btn_login:
                 loginEmployee();
@@ -103,6 +106,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void registerEmployee() {
         Intent intentRegister = new Intent(this, RegisterActivity.class);
         startActivity(intentRegister);
+    }
+
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     class LoginTask extends AsyncTask<String, Void, Boolean> {

@@ -1,16 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".activities.AddTableFoodActivity">
 
-    <EditText
+    <LinearLayout
+        android:id="@+id/ll_add_food_table"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/name_food_table"
-        android:textColor="@color/colorGray"
-        />
-</LinearLayout>
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/ll_add_food_table_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_add_food_table_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btn_close_food_table_custom" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_food_table"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ed_add_food_table_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorRed"
+            android:hint="@string/name_food_table"
+            android:padding="@dimen/ed_add_food_table_padding"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textCursorDrawable="@color/colorRed"
+            android:inputType="text"
+            />
+        <Button
+            android:id="@+id/btn_add_food_table_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_add_food_table_custom"
+            android:text="@string/accept"
+            android:textColor="@color/colorRed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pb_add_table_food"
+        android:layout_width="@dimen/ll_pb_add_table_food_size"
+        android:layout_height="@dimen/ll_pb_add_table_food_size"
+        android:background="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+        <ProgressBar
+            android:id="@+id/pb_add_food_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:indeterminateTint="@color/colorAccent" />
+    </LinearLayout>
+</RelativeLayout>

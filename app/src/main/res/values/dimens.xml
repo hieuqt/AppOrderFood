@@ -19,4 +19,8 @@
     <dimen name="ed_account_register_size">40dp</dimen>
     <dimen name="ed_password_register_size">40dp</dimen>
     <dimen name="text_rbtn_size">15sp</dimen>
+    <dimen name="ed_add_food_table_padding">10dp</dimen>
+    <dimen name="ed_add_food_table_margin">10dp</dimen>
+    <dimen name="ll_add_food_table_padding">10dp</dimen>
+    <dimen name="ll_pb_add_table_food_size">180dp</dimen>
 </resources>
