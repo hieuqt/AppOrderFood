@@ -9,18 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.LoginActivity">
+        <activity android:name=".activities.AddMenuActivity"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="stateVisible">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.RegisterActivity"></activity>
-        <activity android:name=".activities.HomePageActivity"></activity>
-        <activity android:name=".activities.AddTableFoodActivity"
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".activities.HomePageActivity" />
+        <activity
+            android:name=".activities.AddTableFoodActivity"
             android:theme="@style/PopUpActivity"
-            ></activity>
+            android:windowSoftInputMode="stateVisible" />
     </application>
 
 </manifest>
